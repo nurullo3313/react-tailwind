@@ -12,7 +12,7 @@ import Skills from './components/Skills';
 
 function App() {
   return (
-    <>
+    <div>
       <Navbar/>
       <Bot/>
       <Hero/>
@@ -23,7 +23,7 @@ function App() {
       <Contact/>
       <Footer/>
 
-    </>
+    </div>
     
   );
 }
