@@ -10,5 +10,7 @@ body{
   @apply bg-blue-600 font-semibold text-white md:mx-0 mx-auto rounded-full py-3 px-6 items-center gap-2
 }
 .imgAbout::after{
-  @apply content-[''] w-full left-0 top-0  rounded-xl rotate-12 absolute bg-gray-600;
+  content: '';
+  @apply absolute left-0 top-0 w-full h-full bg-cyan-600 rounded-xl rotate-12 -z-0;
 }
+
