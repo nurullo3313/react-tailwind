@@ -19,7 +19,7 @@ export default function Skills() {
         <div className='flex items-center justify-center mt-12 gap-10 flex-wrap'>
           {
             skillsData.map((e,i)=>(
-              <div className='border-2 border-cyan-600 relative min-w-[10rem] max-w-[16rem] bg-gray-900   p-10 rounded-xl'>
+              <div key={i} className='hover:bg-white hover:text-cyan-600 cursor-pointer border-2 border-cyan-600 relative min-w-[10rem] max-w-[16rem] bg-gray-900   p-10 rounded-xl'>
 
             <div
               style={{ background: `conic-gradient(rgb(8,145,170)  ${e.count}%, #ddd ${e.count}% )` }}
