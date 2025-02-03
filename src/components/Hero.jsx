@@ -7,7 +7,7 @@ export default function Hero() {
   return (
     <section id='home' className='min-h-screen flex md:ml-32 pt-10 md:justify-center   md:flex-row flex-col items-center top-20 '>
       <div className='flex-1 items-center justify-center h-full mt-10' >
-        <img src="./assets/myPhoto.png" alt="my photo" className='md:w-11/12 h-full object-cover'  />
+        <img src="./assets/myPhoto.png" alt="my photo" className='md:w-11/12 h-full object-cover  '  />
       </div>
       <div className='flex-1'>
         <div className='md:text-left text-center mt-10'>
