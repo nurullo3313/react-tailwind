@@ -4,7 +4,7 @@ import { Swiper, SwiperSlide } from 'swiper/react';
 import 'swiper/css'; // Основные стили Swiper
 import 'swiper/css/navigation'; // Стили для кнопок навигации
 import 'swiper/css/pagination'; // Стили для пагинации
-import { Navigation, Pagination } from 'swiper/modules';
+import { Navigation, Pagination, Autoplay } from 'swiper/modules';
 
 export default function Project() {
 
@@ -55,9 +55,11 @@ export default function Project() {
       <p className='text-gray-400 mt-3 text-lg'>My awesome works</p>
       </div>
       <br />
-      <div className='flex max-w-6xl px-5 mx-auto items-center relative'>
-        <div className='lg:w-2/3 w-full'>
-       <Swiper slidesPerView={1.3} spaceBetween={60} breakpoints={{}}>
+      <div className=' block md:flex max-w-6xl px-5 mx-auto items-center relative justify-between'>
+        <div className='lg:w-2/4 w-full '>
+       <Swiper slidesPerView={1.3} spaceBetween={60} breakpoints={{ 768:{
+        slidesPerView: 1.3,
+       }}} loop={true} navigation={true} autoplay={{delay:3000}} pagination={{clickable:true}} modules={[Navigation, Pagination , Autoplay]} className='mySwiper'>
         {
           myProjects?.map((p,i)=>(
             <SwiperSlide key={i} className='cursor-pointer'>
@@ -65,8 +67,8 @@ export default function Project() {
             <img src={p.img} alt="" className='rounded-tr-xl rounded-tl-xl' />
             <p className='py-3 px-2 text-2xl font-bold'>{p.nameProject}</p>
             <div className='flex gap-3'>
-              <a href={p.liveDemo} className='text-cyan-600'>Live Demo</a>
-              <a href="#" className='text-cyan-600'>GitHub</a>
+              <a href={p.liveDemo} target='_blank' className='text-cyan-600 bg-gray-800 p-2 inline-block rounded-xl'>Live Demo</a>
+              <a href="#"  className='text-cyan-600 bg-gray-800 p-2 inline-block rounded-xl'>GitHub</a>
             </div>
           </div>
         </SwiperSlide>
@@ -74,6 +76,10 @@ export default function Project() {
         }
        </Swiper>
 
+        </div>
+
+        <div className='w-2/6 md:block hidden'>
+          <img src="./assets/myPhoto.png" alt="" width={300} height={400} className='rounded-3xl'/>
         </div>
 
       </div>
